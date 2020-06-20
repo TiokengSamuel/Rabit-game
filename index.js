@@ -26,16 +26,22 @@ var player = new function () {
     this.img.src = "moto.jpeg";
     this.draw = function (){
         var p1 = c.height - noise(t + this.x) * 0.25;
+        var p2 = c.height - noise(t+5 + this.x) * 0.25;
+
+
         if (p1-15 > this.y) {
             this.ySpeed += 0.1;
         }else {
             this.y = p1 - (p-15);
             this.ySpeed = 0;
         }
+        var angle 
         this.y += this.ySpeed;
 
+        this.rot = angle;
         ctx.save();
         ctx.translate(this.x, this.y - (p1));
+        ctx.rotate(this.rot)
         ctx.drawImage(this.img, -15, -15, 30, 30);
         ctx.restore();
     }
