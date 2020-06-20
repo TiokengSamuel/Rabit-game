@@ -28,6 +28,7 @@ function loop() {
         
     }
 
+    ctx.lineTo(c.width, c.height);
     ctx.fill();
     requestAnimationFrame(loop);
 }
