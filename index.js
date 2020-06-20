@@ -1,1 +1,1 @@
-var c = document.creataeElement()
+var c = document.createElement("canvas");
