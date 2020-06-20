@@ -12,6 +12,7 @@ while (perm.length < 255) {
 
 var lerp = (a,b,t) => a + (b-a) * t;
 var noise = x => {
+    x = x % 255;
     return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x.Math.floor(x))
 }
 
@@ -21,6 +22,7 @@ function loop() {
 
     ctx.fillStyle = "black";
     ctx.beginPath();
+    ctx.moveTo(0, c.height);
     for (let i = 0; i < c.width; i++) {
         ctx.lineTo(i, noise(i));
         
