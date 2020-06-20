@@ -27,7 +27,7 @@ function loop() {
     ctx.beginPath();
     ctx.moveTo(0, c.height);
     for (let i = 0; i < c.width; i++) {
-        ctx.lineTo(i, c.height - noise(i) * 0.25);
+        ctx.lineTo(i, c.height - noise(t + i) * 0.25);
         
     }
 
