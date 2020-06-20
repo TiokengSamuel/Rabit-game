@@ -28,12 +28,13 @@ var player = new function () {
         var p1 = c.height - noise(t + this.x) * 0.25;
         var p2 = c.height - noise(t+5 + this.x) * 0.25;
 
-
+        var grounded = 0;
         if (p1-15 > this.y) {
             this.ySpeed += 0.1;
         }else {
             this.y = p - 15;
             this.ySpeed -= this.y - (p-15);
+            grounded = 1;
         }
         this.y += this.ySpeed;
 
