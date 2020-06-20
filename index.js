@@ -9,6 +9,8 @@ while (perm.length < 255) {
     while(perm.includes(val = Math.floor(random()*255)));
     perm.push(val);
 }
+
+var lerp = (a,b,t) => a + (b-a) * t;
 var noise = x => {
     return
 }
