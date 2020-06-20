@@ -12,7 +12,7 @@ while (perm.length < 255) {
 
 var lerp = (a,b,t) => a + (b-a) * t;
 var noise = x => {
-    return
+    return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x.Math.floor(x))
 }
 
 function loop() {
