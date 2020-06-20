@@ -19,11 +19,14 @@ var noise = x => {
 var player = new function () {
     this.x = c.width/2;
     this.y = 0;
+    this.ySpeed = 0;
     this.rot = 0;
 
     this.img = new Image();
     this.img.src = "moto.jpeg";
-    this.draw = function () {
+    this.draw = function (){
+        var p1 = c.height - noise(t + this.x) * 0.25;
+
         ctx.drawImage(this.img, this.x, 100);
     }
 }
