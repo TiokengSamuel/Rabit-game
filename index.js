@@ -40,6 +40,9 @@ var player = new function () {
 
         var angle = Math.atan2((p-15) - this.y, (this.x+5) - this.x);
 
+        if(grounded) {
+            this.rot -= (this.rot - angle) * 0.5;
+        }
         this.rot = angle;
         ctx.save();
         ctx.translate(this.x, this.y - (p1));
