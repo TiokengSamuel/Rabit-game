@@ -16,6 +16,18 @@ var noise = x => {
     return lerp(perm[Math.floor(x)], perm[Math.ceil(x)], x.Math.floor(x));
 }
 
+var player = new function () {
+    this.x = c.width/2;
+    this.y = 0;
+    this.rot = 0;
+
+    this.img = new Image();
+    this.img.src = "moto.jpg";
+    this.draw = function () {
+        ctx.drawImage(this.img, this.x, 100);
+    }
+}
+
 
 var t = 0;
 function loop() {
