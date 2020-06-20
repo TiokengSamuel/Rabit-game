@@ -4,6 +4,8 @@ c.width = 500;
 c.height = 350;
 document.body.appendChild(c);
 
+var perm = [];
+while (perm.length )
 var noise = x => {
     return
 }
