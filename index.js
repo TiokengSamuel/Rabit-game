@@ -74,7 +74,7 @@ var speed = 0;
 var playing = true;
 var k = {ArrowUp:0, ArrowDown:0, ArrowLeft:0, ArrowRight:0};
 function loop() {
-    speed -= (speed - (k.ArrowUp - k.ArrowDown)) * 0.1;
+    speed -= (speed - (k.ArrowUp - k.ArrowDown)) * 0.01;
     t += 10 * speed;
     ctx.fillStyle = "#19f";
     ctx.fillRect(0,0,c.width, c.height);
