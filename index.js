@@ -29,13 +29,13 @@ var player = new function () {
         if (p1-15 > this.y) {
             this.ySpeed += 0.1;
         }else {
-            this.y = p1 - 15;
+            this.y = p1 - (p-15);
             this.ySpeed = 0;
         }
         this.y += this.ySpeed;
 
         ctx.save();
-        ctx.translate(this.x, this.y - (p1-15));
+        ctx.translate(this.x, this.y - (p1));
         ctx.drawImage(this.img, -15, -15, 30, 30);
         ctx.restore();
     }
