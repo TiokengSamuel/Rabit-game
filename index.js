@@ -26,7 +26,12 @@ var player = new function () {
     this.img.src = "moto.jpeg";
     this.draw = function (){
         var p1 = c.height - noise(t + this.x) * 0.25;
+        if (p1 > this.y) {
+            this.ySpeed = 0.1;
+        }
 
+        ctx.save();
+        ctx.translate(this.x, this.y)
         ctx.drawImage(this.img, this.x, 100);
     }
 }
