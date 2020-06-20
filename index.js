@@ -49,6 +49,7 @@ var player = new function () {
         this.rSpeed += (k.ArrowLeft - k.ArrowRight) * 0.05;
         this.rot -= this.rSpeed * 0.1;
        if(this.rot > Math.PI) this.rot = -Math.PI;
+       if(this.rot < -Math.PI) this.rot = -Math.PI;
         ctx.save();
         ctx.translate(this.x, this.y - (p1));
         ctx.rotate(this.rot)
