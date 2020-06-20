@@ -10,3 +10,5 @@ function loop() {
 
     requestAnimationFrame(loop);
 }
+
+loop();
