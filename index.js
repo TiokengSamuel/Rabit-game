@@ -22,7 +22,7 @@ var player = new function () {
     this.rot = 0;
 
     this.img = new Image();
-    this.img.src = "moto.jpg";
+    this.img.src = "moto.jpeg";
     this.draw = function () {
         ctx.drawImage(this.img, this.x, 100);
     }
