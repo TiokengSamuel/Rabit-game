@@ -32,8 +32,8 @@ var player = new function () {
         if (p1-15 > this.y) {
             this.ySpeed += 0.1;
         }else {
-            this.y = p1 - (p-15);
-            this.ySpeed = 0;
+            this.y = p - 15;
+            this.ySpeed -= this.y - (p-15);
         }
         var angle 
         this.y += this.ySpeed;
