@@ -48,7 +48,7 @@ var player = new function () {
         var angle = Math.atan2((p-15) - this.y, (this.x+5) - this.x);
         this.y += this.ySpeed;
 
-        if(grounded) {
+        if(grounded && playing) {
             this.rot -= (this.rot - angle) * 0.5;
             this.rSpeed = this.rSpeed - (angle - this.rot);
         }
