@@ -37,9 +37,11 @@ var player = new function () {
             this.ySpeed -= this.y - (p-15);
             grounded = 1;
         }
-        this.y += this.ySpeed;
+        
+        if(grounded && Math.abs(this.rot))
 
         var angle = Math.atan2((p-15) - this.y, (this.x+5) - this.x);
+        this.y += this.ySpeed;
 
         if(grounded) {
             this.rot -= (this.rot - angle) * 0.5;
