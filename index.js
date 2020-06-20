@@ -45,6 +45,8 @@ function loop() {
 
     ctx.lineTo(c.width, c.height);
     ctx.fill();
+
+    player.draw();
     requestAnimationFrame(loop);
 }
 
