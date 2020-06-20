@@ -57,6 +57,7 @@ var player = new function () {
 
 
 var t = 0;
+var k = {};
 function loop() {
     t += 5;
     ctx.fillStyle = "#19f";
@@ -76,5 +77,7 @@ function loop() {
     player.draw();
     requestAnimationFrame(loop);
 }
+onkeydown = d=> k[d.key] = 1;
+onkeyup = d=> k[d.key] = 0;
 
 loop();
