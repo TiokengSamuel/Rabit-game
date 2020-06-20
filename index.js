@@ -38,8 +38,8 @@ var player = new function () {
             grounded = 1;
         }
         
-        if(grounded && Math.abs(this.rot) > Math.PI * 0.5){
-            
+        if(!playing || grounded && Math.abs(this.rot) > Math.PI * 0.5){
+            play
         }
 
         var angle = Math.atan2((p-15) - this.y, (this.x+5) - this.x);
