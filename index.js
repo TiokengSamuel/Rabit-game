@@ -6,5 +6,6 @@ document.body.appendChild(c);
 
 function loop() {
     ctx.fillStyle = "#19f"
+    
 
 }
