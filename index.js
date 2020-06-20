@@ -7,6 +7,7 @@ document.body.appendChild(c);
 var perm = [];
 while (perm.length < 255) {
     while(perm.includes(val = Math.floor(random()*255)));
+    perm.push(val);
 }
 var noise = x => {
     return
