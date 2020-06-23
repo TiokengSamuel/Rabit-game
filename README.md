@@ -1,2 +1,3 @@
-# Rabit-game
-A game in javascript of Rabit following carrotts
+# moto-biking
+A game in javascript of biker which is control by the users keyboard
+
